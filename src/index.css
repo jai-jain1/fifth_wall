@@ -1,0 +1,30 @@
+@import "tailwindcss";
+@theme {
+  --color-teal: #0F4C5C;
+  --color-ember: #E36414;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-sans: "Instrument Sans", system-ui, sans-serif;
+}
+html, body, #root { height: 100%; margin: 0; background: #0a1a1f; overflow: hidden; font-family: var(--font-sans); color: #eef4f4; }
+.glass { background: rgba(10, 32, 40, 0.62); backdrop-filter: blur(16px) saturate(140%); -webkit-backdrop-filter: blur(16px) saturate(140%); border: 1px solid rgba(255,255,255,0.12); }
+.btn { padding: 0.45rem 0.8rem; border-radius: 0.6rem; font-size: 0.8rem; border: 1px solid rgba(255,255,255,0.14); background: rgba(255,255,255,0.05); transition: background .2s, border-color .2s; cursor: pointer; color: inherit; }
+.btn:hover { background: rgba(255,255,255,0.14); }
+.btn:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid #E36414; outline-offset: 2px; }
+.btn.on { background: #E36414; border-color: #E36414; color: #fff; }
+.btn:disabled { opacity: .35; cursor: default; }
+.chip { font-size: 11px; padding: 3px 9px; border-radius: 999px; color: #fff; background: rgba(10,32,40,.78); border: 1px solid rgba(255,255,255,.25); white-space: nowrap; cursor: pointer; user-select: none; }
+.chip:hover { background: #E36414; }
+input, select { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.16); border-radius: .5rem; padding: .35rem .5rem; font-size: .8rem; color: #fff; width: 100%; }
+select option { color: #000; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+.glass { box-shadow: 0 10px 40px rgba(0,0,0,.35); }
+.seg { padding: .5rem 1rem; border-radius: 999px; font-size: .82rem; font-weight: 500; color: rgba(255,255,255,.72); background: transparent; border: 0; cursor: pointer; transition: background .25s, color .25s; white-space: nowrap; }
+.seg:hover { color: #fff; background: rgba(255,255,255,.08); }
+.seg:focus-visible { outline: 2px solid #E36414; outline-offset: 1px; }
+.seg-on { background: #f4f7f7; color: #0F4C5C; }
+.seg-on:hover { background: #fff; color: #0F4C5C; }
+.tog-on { color: #fff; }
+.tog-on::before { content: ''; display: inline-block; width: 6px; height: 6px; border-radius: 9px; background: #E36414; margin-right: 7px; vertical-align: 1px; box-shadow: 0 0 8px #E36414; }
+.glass.btn { background: rgba(10,32,40,.62); }
+canvas { outline: none; display: block; }
